@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Users list</h1>
-    <input type="button" class="btn btn-info" value="Pievienot" onclick="location.href = '';">
+    <input type="button" class="btn btn-info" value="Pievienot" onclick="location.href = '{{route('users.create')}}';">
     <table class="table table-striped table-responsive">
         <thead>
         <tr>
@@ -19,7 +19,7 @@
             @foreach($users as $user)
         <tr>
             <td>{{$user->id}}</td>
-            <td>{{$user->name}}</td>
+            <td><a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a></td>
             <td>{{$user->email}}</td>
             <td>{{$user->created_at->diffForhumans()}}</td>
             <td>{{$user->role ? $user->role->name : 'nav'}}</td>

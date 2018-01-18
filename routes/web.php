@@ -26,5 +26,10 @@ Route::get('/admin', function() {
 });
 
 Route::resource('admin/users', 'AdminUsersController');
+//Route::get('admin/users', 'AdminUsersController@index')->name('admin.users.index');
+//Route::get('admin/users/create', 'AdminUsersController@create')->name('admin.users.create');
+//Route::get('admin/users/edit', 'AdminUsersController@edit')->name('admin.users.edit');
+
 Route::post('admin/users/create', 'AdminUsersController@store')->name('users.store');
+Route::post('admin/users/edit/', 'AdminUsersController@edit')->name('users.edit');
 

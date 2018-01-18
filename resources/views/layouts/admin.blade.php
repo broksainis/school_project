@@ -76,7 +76,7 @@
                     <li><a href="#">Admin</a></li>
                     <li><a href="#">Ziņas</a></li>
                     <li><a href="#">Kategorijas</a></li>
-                    <li><a href="#">Lietotāji</a></li>
+                    <li><a href="{{route('users.index')}}">Lietotāji</a></li>
                     <li><a href="#">Galerija</a></li>
                     <li><a href="#">Notikumi</a></li>
                 </ul>
