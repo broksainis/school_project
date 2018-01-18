@@ -10,7 +10,7 @@
 
     <div class="form-group">
         {!! Form::label('category_id', 'Kategorija:') !!}
-        {!! Form::select('category_id', array('1' => 'Love', '0' => 'Sports'), null, ['class' => 'form-control']) !!}
+        {!! Form::select('category_id', ['' => 'Izvēlne'] + $categories, null, ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">
