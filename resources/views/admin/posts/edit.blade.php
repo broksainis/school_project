@@ -2,6 +2,10 @@
 
 @section('content')
     <h1>Ziņas labošana</h1>
+    <div class="col-sm-6">
+        <img height="100" src="/images/{{$post->photo->file}}" alt="">
+    </div>
+    
     <div class="col-sm-10">
         {!! Form::model($post, ['method'=>'PATCH', 'action'=> ['AdminPostsController@update', $post->id], 'files'=>true]) !!}
         <div class="form-group">
@@ -25,7 +29,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Edit Post', ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit('Rediģēt', ['class' => 'btn btn-primary']) !!}
         </div>
 
         {!! Form::close() !!}

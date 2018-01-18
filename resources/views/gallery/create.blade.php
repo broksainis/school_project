@@ -2,7 +2,7 @@
 
 @section('styles')
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/basic.min.css" rel="stylesheet">
-@endsection
+@stop
 
 @section('content')
     <h1>Pievienot bildi</h1>
@@ -11,8 +11,8 @@
 
         {!! Form::close() !!}
     </div>
-@endsection
+@stop
 
 @section('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/dropzone.js"></script>
-@endsection
+@stop

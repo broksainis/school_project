@@ -20,7 +20,17 @@
             @if($posts)
                 @foreach($posts as $post)
                     <tr>
-                        <td><img height="50" src="{{$post->photo ? 'images/' .  $post->photo->file : 'http://placehold.it/400x400' }} " alt=""></td>
+                        @if($post->photo)
+                        <td>
+                            <img height="100" src="/images/{{$post->photo->file}}" alt="">
+                        </td>
+
+                        @else
+                            <td>
+                                <img height="100" src="http://tarch.in/img/placeholder/blogpost-placeholder-100x100.png" alt="">
+                            </td>
+                        @endif
+
                         <td>{{$post->id}}</td>
                         <td>{{$post->title}}</a></td>
                         <td>{!! str_limit(strip_tags($post->content), $limit = 50, $end = '...') !!}</a></td>
