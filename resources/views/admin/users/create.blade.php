@@ -14,8 +14,13 @@
         </div>
 
         <div class="form-group">
+            {!! Form::label('password', 'Parole:') !!}
+            {!! Form::password('password', null, ['class' => 'form-control']) !!}
+        </div>
+
+        <div class="form-group">
             {!! Form::label('role_id', 'Loma:') !!}
-            {!! Form::text('role_id', null, ['class' => 'form-control']) !!}
+            {!! Form::SELECT('role_id', [''=> 'Izvēlne:'] + $roles ,null, ['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group">
