@@ -69,16 +69,20 @@
         </div>
     </nav>
     <!-- left menu -->
-    <ul class="nav navbar-nav">
-        <ul class="nav nav-pills nav-stacked span2">
-            <li><a href="#">Admin</a></li>
-            <li><a href="#">Ziņas</a></li>
-            <li><a href="#">Kategorijas</a></li>
-            <li><a href="#">Lietotāji</a></li>
-            <li><a href="#">Galerija</a></li>
-            <li><a href="#">Notikumi</a></li>
-        </ul>
-    </ul>
+    <div class="row">
+        <div class="col-sm-1">
+            <ul class="nav navbar-nav">
+                <ul class="nav nav-pills nav-stacked span2">
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">Ziņas</a></li>
+                    <li><a href="#">Kategorijas</a></li>
+                    <li><a href="#">Lietotāji</a></li>
+                    <li><a href="#">Galerija</a></li>
+                    <li><a href="#">Notikumi</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
     @yield('content')
 </div>
 
