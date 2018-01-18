@@ -7,6 +7,7 @@ use App\Http\Requests\UsersRequest;
 use App\Http\Requests\UsersEditRequest; //include request for editing
 use App\User;
 use App\Role;
+use DB;
 
 class AdminUsersController extends Controller
 {
@@ -105,6 +106,7 @@ class AdminUsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::delete('delete from users where id = ?',[$id]);
+        $info = "<h2>Ieraksts izdzēsts</h2>";
     }
 }
