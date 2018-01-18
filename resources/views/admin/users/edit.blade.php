@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Edit</h1>
-    {!! Form::open(['method' => 'PATCH', 'acion'=> ['AdminUsersController@update', $user->id]]) !!}
+    {!! Form::model($user, ['method'=>'PATCH', 'action'=> ['AdminUsersController@update', $user->id]]) !!}
     <div class="form-group">
         {!! Form::label('name', 'Vārds:') !!}
         {!! Form::text('name', null, ['class' => 'form-control']) !!}
@@ -25,7 +25,7 @@
 
     <div class="form-group">
         {!! Form::label('active', 'Statuss:') !!}
-        {!! Form::select('active', array(1 => 'Aktīvs', 0=> 'Neaktīvs'), 0 , ['class'=>'form-control'])!!}
+        {!! Form::select('active', array(1 => 'Aktīvs', 0=> 'Neaktīvs'), null , ['class'=>'form-control'])!!}
     </div>
 
     <div class="form-group">
@@ -35,5 +35,4 @@
     {!! Form::close() !!}
 
     @include('inc.form_errors')
-
 @endsection

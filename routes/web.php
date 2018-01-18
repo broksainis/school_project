@@ -32,5 +32,5 @@ Route::resource('admin/posts', 'AdminPostsController');
 //Route::get('admin/users/edit', 'AdminUsersController@edit')->name('admin.users.edit');
 
 Route::post('admin/users/create', 'AdminUsersController@store')->name('users.store');
-Route::post('admin/users/edit/', 'AdminUsersController@edit')->name('users.edit');
+
 

@@ -64,8 +64,7 @@ class AdminUsersController extends Controller
     {
         $user = User::findOrFail($id);
         $roles = Role::pluck('name','id')->all();
-        var_dump();
-        return view('users.edit', compact('user'));
+        return view('admin.users.edit', compact('user', 'roles'));
     }
 
     /**
