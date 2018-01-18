@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('styles') <!-- yield styles for dropzone plugin -->
 </head>
 <body>
 <div id="app">
@@ -71,7 +72,7 @@
                     <li><a href="{{route('posts.index')}}">Ziņas</a></li>
                     <li><a href="{{route('categories.index')}}">Kategorijas</a></li>
                     <li><a href="{{route('users.index')}}">Lietotāji</a></li>
-                    <li><a href="{{route('gallery.upload')}}">Galerija</a></li>
+                    <li><a href="{{route('gallery.create')}}">Galerija</a></li>
                     <li><a href="#">Notikumi</a></li>
                 </ul>
             </ul>
@@ -81,5 +82,6 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+@yield('scripts')
 </body>
 </html>

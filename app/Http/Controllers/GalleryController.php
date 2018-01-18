@@ -11,4 +11,9 @@ class GalleryController extends Controller
         $photos = Photo::all();
         return view('gallery.index', compact('photos'));
     }
+
+    public function create() {
+        return view('gallery.create');
+    }
+
 }
