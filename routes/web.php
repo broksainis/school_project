@@ -25,12 +25,17 @@ Route::get('/admin', function() {
     return view('admin.index');
 });
 
-Route::resource('admin/users', 'AdminUsersController');
-Route::resource('admin/posts', 'AdminPostsController');
+Route::group(['middleware' => 'admin'], function() {
+    Route::resource('admin/users', 'AdminUsersController');
+    Route::resource('admin/posts', 'AdminPostsController');
+    Route::post('admin/users/create', 'AdminUsersController@store')->name('users.store');
+});
+
+
 //Route::get('admin/users', 'AdminUsersController@index')->name('admin.users.index');
 //Route::get('admin/users/create', 'AdminUsersController@create')->name('admin.users.create');
 //Route::get('admin/users/edit', 'AdminUsersController@edit')->name('admin.users.edit');
 
-Route::post('admin/users/create', 'AdminUsersController@store')->name('users.store');
+
 
 
