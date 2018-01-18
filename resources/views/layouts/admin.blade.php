@@ -71,7 +71,7 @@
                     <li><a href="{{route('posts.index')}}">Ziņas</a></li>
                     <li><a href="{{route('categories.index')}}">Kategorijas</a></li>
                     <li><a href="{{route('users.index')}}">Lietotāji</a></li>
-                    <li><a href="#">Galerija</a></li>
+                    <li><a href="{{route('gallery.upload')}}">Galerija</a></li>
                     <li><a href="#">Notikumi</a></li>
                 </ul>
             </ul>
