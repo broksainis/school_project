@@ -26,6 +26,7 @@ Route::get('/admin', function() {
 });
 
 Route::resource('admin/users', 'AdminUsersController');
+Route::resource('admin/posts', 'AdminPostsController');
 //Route::get('admin/users', 'AdminUsersController@index')->name('admin.users.index');
 //Route::get('admin/users/create', 'AdminUsersController@create')->name('admin.users.create');
 //Route::get('admin/users/edit', 'AdminUsersController@edit')->name('admin.users.edit');

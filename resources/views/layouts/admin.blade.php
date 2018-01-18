@@ -74,7 +74,7 @@
             <ul class="nav navbar-nav">
                 <ul class="nav nav-pills nav-stacked span2">
                     <li><a href="#">Admin</a></li>
-                    <li><a href="#">Ziņas</a></li>
+                    <li><a href="{{route('posts.index')}}">Ziņas</a></li>
                     <li><a href="#">Kategorijas</a></li>
                     <li><a href="{{route('users.index')}}">Lietotāji</a></li>
                     <li><a href="#">Galerija</a></li>
