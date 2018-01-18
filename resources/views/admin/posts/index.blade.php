@@ -26,7 +26,7 @@
                     <td>{{$post->title}}</a></td>
                     <td>{!! str_limit(strip_tags($post->content), $limit = 50, $end = '...') !!}</a></td>
                     <td>{{$post->user->name}}</td>
-                    <td>{{$post->category_id}}</td>
+                    <td>{{$post->category->name}}</td>
                     <td>{{$post->created_at->diffForhumans()}}</td>
                     <td><input type="button" class="btn btn-danger" value="Dzēst" onclick="location.href = '/admin/users/delete/{{ $post->id }}';"></td>
                     <td><input type="button" class="btn btn-info" value="Rediģēt" onclick="location.href = '{{route('users.edit', $post->id)}}';"></td>

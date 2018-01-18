@@ -30,6 +30,7 @@ Route::group(['middleware' => 'admin'], function() {
     Route::resource('admin/posts', 'AdminPostsController');
     Route::post('admin/users/create', 'AdminUsersController@store')->name('users.store');
     Route::get('admin/users/delete/{id}','AdminUsersController@destroy');
+    Route::post('admin/posts/create', 'AdminPostsController@store')->name('posts.store');
 });
 
 

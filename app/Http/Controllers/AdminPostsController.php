@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\PostsRequest;
+use App\Http\Requests;
 use App\Post;
 
 class AdminPostsController extends Controller
@@ -34,9 +35,9 @@ class AdminPostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostsRequest $request)
     {
-        //
+        return $request->all();
     }
 
     /**
