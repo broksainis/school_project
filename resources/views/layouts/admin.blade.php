@@ -18,7 +18,6 @@
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
                     <span class="sr-only">Toggle Navigation</span>
@@ -26,7 +25,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/admin') }}">
                     {{ config('app.name', 'Administrācija') }}
@@ -35,8 +33,6 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-
-
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
@@ -56,7 +52,6 @@
                                                      document.getElementById('logout-form').submit();">
                                         Logout
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
@@ -69,8 +64,7 @@
         </div>
     </nav>
     <!-- left menu -->
-    <div class="row">
-        <div class="col-sm-1">
+        <div class="col-sm-2">
             <ul class="nav navbar-nav">
                 <ul class="nav nav-pills nav-stacked span2">
                     <li><a href="#">Admin</a></li>
@@ -82,7 +76,6 @@
                 </ul>
             </ul>
         </div>
-    </div>
     @yield('content')
 </div>
 
