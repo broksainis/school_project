@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>Users list</h1>
+    <input type="button" class="btn btn-info" value="Pievienot" onclick="location.href = 'http:\\www.google.com';">
     <table class="table table-striped table-responsive">
         <thead>
         <tr>
@@ -25,7 +26,6 @@
         <tbody>
         @if($users)
             @foreach($users as $user)
-
         <tr>
             <td>
                 {{$user->id}}
@@ -37,10 +37,10 @@
                 {{$user->email}}
             </td>
             <td>
-                {{$user->role}}
+                {{$user->role->name}}
             </td>
             <td>
-                {{$user->created_at}}
+                {{$user->created_at->diffForhumans()}}
             </td>
         </tr>
             @endforeach
