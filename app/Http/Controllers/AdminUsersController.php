@@ -40,8 +40,15 @@ class AdminUsersController extends Controller
      */
     public function store(UsersRequest $request)
     {
-        User::create($request->all());
-        return redirect('admin/users');
+
+        if(trim($request->password) == ''){
+            $input = $request->except('password'); //leave other info, when no password input
+        } else {
+            $input = $request->all();
+            $input['password'] = bcrypt($request->password);
+        }
+        User::create($input);
+        return redirect('admin/users'); //redirect to users page
     }
 
     /**
