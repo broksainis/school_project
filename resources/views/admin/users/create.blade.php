@@ -10,7 +10,7 @@
 
         <div class="form-group">
             {!! Form::label('email', 'Epasts:') !!}
-            {!! Form::text('name', null, ['class' => 'form-control']) !!}
+            {!! Form::text('email', null, ['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group">
@@ -20,12 +20,12 @@
 
         <div class="form-group">
             {!! Form::label('role_id', 'Loma:') !!}
-            {!! Form::SELECT('role_id', [''=> 'Izvēlne:'] + $roles ,null, ['class' => 'form-control']) !!}
+            {!! Form::select('role_id', ['0'=> 'Izvēlne:'] + $roles ,null, ['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group">
-            {!! Form::label('status', 'Statuss:') !!}
-            {!! Form::select('status', array(1 => 'aktīvs', 0 => 'neaktīvs'), ['class' => 'form-control']) !!}
+            {!! Form::label('active', 'Statuss:') !!}
+            {!! Form::select('active', array(1 => 'Aktīvs', 0=> 'Neaktīvs'), 0 , ['class'=>'form-control'])!!}
         </div>
 
         <div class="form-group">

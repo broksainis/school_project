@@ -6,42 +6,24 @@
     <table class="table table-striped table-responsive">
         <thead>
         <tr>
-            <th>
-                ID
-            </th>
-            <th>
-                Vārds
-            </th>
-            <th>
-                E-Pasts
-            </th>
-            <th>
-                Loma
-            </th>
-            <th>
-                Reģistrācijas datums
-            </th>
+            <th>ID</th>
+            <th>Vārds</th>
+            <th>E-Pasts</th>
+            <th>Reģistrācijas datums</th>
+            <th>Loma</th>
+            <th>Statuss</th>
         </tr>
         </thead>
         <tbody>
         @if($users)
             @foreach($users as $user)
         <tr>
-            <td>
-                {{$user->id}}
-            </td>
-            <td>
-                {{$user->name}}
-            </td>
-            <td>
-                {{$user->email}}
-            </td>
-            <td>
-                {{$user->role->name}}
-            </td>
-            <td>
-                {{$user->created_at->diffForhumans()}}
-            </td>
+            <td>{{$user->id}}</td>
+            <td>{{$user->name}}</td>
+            <td>{{$user->email}}</td>
+            <td>{{$user->created_at->diffForhumans()}}</td>
+            <td>{{$user->role ? $user->role->name : 'nav'}}</td>
+            <td>{{$user->active == 1 ? 'aktīvs' : 'neaktīvs' }}</td>
         </tr>
             @endforeach
        @endif
