@@ -28,8 +28,11 @@ Route::get('/admin', function() {
 Route::group(['middleware' => 'admin'], function() {
     Route::resource('admin/users', 'AdminUsersController');
     Route::resource('admin/posts', 'AdminPostsController');
+    Route::resource('admin/categories', 'AdminCategoriesController');
     Route::post('admin/users/create', 'AdminUsersController@store')->name('users.store');
+    Route::post('admin/categories/create', 'AdminCategoriesController@store')->name('categoriess.store');
     Route::get('admin/users/delete/{id}','AdminUsersController@destroy');
+    //Route::get('admin/posts/{id}','AdminPostsController@destroy');
     Route::post('admin/posts/create', 'AdminPostsController@store')->name('posts.store');
 });
 

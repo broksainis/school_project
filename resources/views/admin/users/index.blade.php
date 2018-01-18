@@ -26,7 +26,7 @@
             <td>{{$user->created_at->diffForhumans()}}</td>
             <td>{{$user->role ? $user->role->name : 'nav'}}</td>
             <td>{{$user->active == 1 ? 'aktīvs' : 'neaktīvs' }}</td>
-            <td><input type="button" class="btn btn-danger" value="Dzēst" onclick="location.href = '/admin/users/delete/{{ $user->id }}';"></td>
+            <td><input type="button" class="btn btn-danger" value="Dzēst" onclick="location.href = '/admin/users/delete/{{ ,$user->id }}';"></td>
             <td><input type="button" class="btn btn-info" value="Rediģēt" onclick="location.href = '{{route('users.edit', $user->id)}}';"></td>
         </tr>
             @endforeach

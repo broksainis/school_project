@@ -2,6 +2,10 @@
 
 @section('content')
     <h1>Edit post</h1>
+
+    <img src="{{$post->photo->file}}" class="img-responsive" alt="">
+
+
     {!! Form::model($post, ['method'=>'PATCH', 'action'=> ['AdminPostsController@update', $post->id], 'files'=>true]) !!}
     <div class="form-group">
         {!! Form::label('title', 'Nosaukums:') !!}
@@ -15,7 +19,7 @@
 
     <div class="form-group">
         {!! Form::label('photo_id', 'Fotogrāfija:') !!}
-        {!! Form::file('photo_id', null, ['class' => 'form-control']) !!}
+        {!! Form::file('photo_id', ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">

@@ -49,8 +49,8 @@ class AdminPostsController extends Controller
         if($file = $request->file('photo_id')) { //check for pic
             $name = time() . $file->getClientOriginalName();
             $file->move('images', $name);
-            $pic = Photo::create(['file' => $name]);
-            $input['photo_id'] = $pic->id;
+            $photo = Photo::create(['file' => $name]);
+            $input['photo_id'] = $photo->id;
 
         }
 
@@ -97,8 +97,8 @@ class AdminPostsController extends Controller
         if($file = $request->file('photo_id')) { //check for pic
             $name = time() . $file->getClientOriginalName();
             $file->move('images', $name);
-            $pic = Photo::create(['file' => $name]);
-            $input['photo_id'] = $pic->id;
+            $hoto = Photo::create(['file' => $name]);
+            $input['photo_id'] = $photo->id;
 
         }
         Auth::user()->posts()->whereId($id)->first()->update($input); //update opened post
@@ -113,6 +113,9 @@ class AdminPostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        unlink(public_path() . '\\' . $post->photo->file); //unlink image from table
+        $post->delete();
+        return redirect('/admin/posts');
     }
 }
