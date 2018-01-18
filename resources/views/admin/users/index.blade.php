@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Users list</h1>
-    <input type="button" class="btn btn-info" value="Pievienot" onclick="location.href = 'http:\\www.google.com';">
+    <input type="button" class="btn btn-info" value="Pievienot" onclick="location.href = '';">
     <table class="table table-striped table-responsive">
         <thead>
         <tr>
