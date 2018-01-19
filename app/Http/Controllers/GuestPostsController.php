@@ -47,7 +47,8 @@ class GuestPostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $posts = Post::findOrFail($id);
+        return view('guests.posts.show', compact('posts'));
     }
 
     /**

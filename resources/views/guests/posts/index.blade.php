@@ -13,15 +13,12 @@
                 <p class="card-text">{{$post->content}}</p>
                 <p class="card-text">Autors: <i>{{$post->user->name}}</i></p>
                 <p class="card-text"><small class="text-muted">{{$post->created_at->diffForhumans()}}</small></p>
+                <a href="{{route('posts.show', ['id' => $post->id])}}" class="btn btn-primary">Lasīt tālāk..</a>
             </div>
         </div>
     @endforeach
 @endif
-
-
         <div class="col-sm-3">
             {{$posts->render()}}
         </div>
-
-
 @stop

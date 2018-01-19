@@ -40,6 +40,7 @@ Route::group(['middleware' => 'admin'], function() {
 });
 
 Route::get('/', 'GuestPostsController@index');
+Route::get('/posts/{id}', 'GuestPostsController@show')->name('posts.show');
 
 
 //Route::get('admin/users', 'AdminUsersController@index')->name('admin.users.index');
