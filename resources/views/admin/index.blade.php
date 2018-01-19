@@ -1,5 +1,5 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h1>Admin Dashboard</h1>
+    <h1>Administrācijas panelis</h1>
 @endsection

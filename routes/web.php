@@ -38,6 +38,8 @@ Route::group(['middleware' => 'admin'], function() {
     Route::post('admin/posts/create', 'AdminPostsController@store')->name('posts.store');
 });
 
+Route::get('/', 'GuestPostsController@index');
+
 
 //Route::get('admin/users', 'AdminUsersController@index')->name('admin.users.index');
 //Route::get('admin/users/create', 'AdminUsersController@create')->name('admin.users.create');

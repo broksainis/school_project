@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Administrācija') }}</title>
+    <title>{{ config('app.name', 'Viesis') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -26,10 +25,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+            @guest
+                @else
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/admin') }}">
-                    {{ config('app.name', 'Administrācija') }}
-                </a>
+                    <a class="navbar-brand" href="{{ url('/admin') }}">
+                        {{ config('app.name', 'Administrācija') }}
+                    </a>
+                    @endif
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -39,7 +41,6 @@
                     <!-- Authentication Links -->
                     @guest
                     <li><a href="{{ route('login') }}">Pieslēgties</a></li>
-                    <li><a href="{{ route('register') }}">Reģistrācija</a></li>
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -64,19 +65,6 @@
             </div>
         </div>
     </nav>
-    <!-- left menu -->
-        <div class="col-sm-2">
-            <ul class="nav navbar-nav">
-                <ul class="nav nav-pills nav-stacked span2">
-                    <li><a href="#">Admin</a></li>
-                    <li><a href="{{route('posts.index')}}">Ziņas</a></li>
-                    <li><a href="{{route('categories.index')}}">Kategorijas</a></li>
-                    <li><a href="{{route('users.index')}}">Lietotāji</a></li>
-                    <li><a href="{{route('gallery.index')}}">Galerija</a></li>
-                    <li><a href="#">Notikumi</a></li>
-                </ul>
-            </ul>
-        </div>
     @yield('content')
 </div>
 
