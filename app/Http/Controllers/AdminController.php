@@ -14,7 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->take(2)->get();
+        $posts = Post::orderBy('created_at', 'desc')->take(3)->get();
         return view('admin.index', compact('posts'));
     }
 

@@ -8,7 +8,7 @@
                 <img class="card-img-top" src="http://tarch.in/img/placeholder/blogpost-placeholder-100x100.png" alt="Card image cap">
             @endif
             <h3 class="text-center">{{$posts->title}}</h3>
-            <small class="text-muted">{{$posts->user->name}}</small>
+            <h4 class="text-muted">{{$posts->user->name}}</h4>
             <p class="card-text">{{$posts->content}}</p>
         </div>
 @endif
