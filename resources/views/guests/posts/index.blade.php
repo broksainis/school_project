@@ -2,10 +2,10 @@
 @section('content')
 @if($posts)
     @foreach($posts as $post)
-        <div class="col-sm-6">
+        <div class="col-sm-4 col-sm-offset-1">
             <div class="card-block">
             @if($post->photo)
-                    <img width="200" class="card-img-top" src="/images/{{$post->photo->file}}" alt="Card image cap">
+                    <img width="400" height="200" class="card-img-top" src="/images/{{$post->photo->file}}" alt="Card image cap">
             @else
                     <img class="card-img-top" src="http://tarch.in/img/placeholder/blogpost-placeholder-100x100.png" alt="Card image cap">
             @endif
@@ -16,4 +16,11 @@
         </div>
     @endforeach
 @endif
+
+
+        <div class="col-sm-3">
+            {{$posts->render()}}
+        </div>
+
+
 @stop

@@ -14,7 +14,7 @@ class GuestPostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::simplePaginate(4); //paginate every 4 posts
         return view('guests.posts.index', compact('posts'));
     }
 
