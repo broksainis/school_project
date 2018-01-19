@@ -10,6 +10,7 @@ use App\User;
 use App\Photo;
 use App\Category;
 use Auth;
+use DB;
 
 class AdminPostsController extends Controller
 {
@@ -114,9 +115,7 @@ class AdminPostsController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::findOrFail($id);
-        unlink(public_path() . '\\' . $post->photo->file); //unlink image from table
-        $post->delete();
+        DB::delete('delete from posts where id = ?',[$id]);
         return redirect('/admin/posts');
     }
 }

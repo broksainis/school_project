@@ -107,6 +107,6 @@ class AdminUsersController extends Controller
     public function destroy($id)
     {
         DB::delete('delete from users where id = ?',[$id]);
-        $info = "<h2>Ieraksts izdzēsts</h2>";
+        return redirect('/admin/users');
     }
 }

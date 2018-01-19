@@ -38,6 +38,7 @@
                         <td>{{$post->category ? $post->category->name : 'Nav'}}</td>
                         <td>{{$post->created_at->diffForhumans()}}</td>
                         <td><input type="button" class="btn btn-info" value="Rediģēt" onclick="location.href = '{{route('posts.edit', $post->id)}}';"></td>
+                        <td><input type="button" class="btn btn-danger" value="Dzēst" onclick="location.href = '/admin/posts/delete/{{ $post->id }}';"></td>
                     </tr>
                 @endforeach
             @endif

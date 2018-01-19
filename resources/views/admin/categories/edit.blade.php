@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h1>Categories</h1>
+    <h1>Kategorijas</h1>
     <div class="col-sm-6">
         {!! Form::model($category, ['method'=>'PATCH', 'action'=> ['AdminCategoriesController@update', $category->id]]) !!}
         <div class="form-group">
@@ -10,7 +10,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Update Category', ['class'=>'btn btn-primary col-sm-6 ']) !!}
+            {!! Form::submit('Atjaunot', ['class'=>'btn btn-info col-sm-2']) !!}
         </div>
         {!! Form::close() !!}
 
@@ -19,7 +19,7 @@
 
 
         <div class="form-group">
-            {!! Form::submit('Delete Category', ['class'=>'btn btn-danger col-sm-6']) !!}
+            {!! Form::submit('Dzēst', ['class'=>'btn btn-danger col-sm-2']) !!}
         </div>
         {!! Form::close() !!}
     </div>

@@ -39,6 +39,14 @@ class User extends Authenticatable
         }
     }
 
+    public function isUser() {
+        if($this->role->name == 'lietotājs' && $this->active == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function posts() {
         return $this->hasMany('App\Post');
     }

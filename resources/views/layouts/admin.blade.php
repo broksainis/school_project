@@ -68,7 +68,7 @@
         <div class="col-sm-2">
             <ul class="nav navbar-nav">
                 <ul class="nav nav-pills nav-stacked span2">
-                    <li><a href="#">Admin</a></li>
+                    <li><a href="{{ url('/admin') }}">Admin</a></li>
                     <li><a href="{{route('posts.index')}}">Ziņas</a></li>
                     <li><a href="{{route('categories.index')}}">Kategorijas</a></li>
                     <li><a href="{{route('users.index')}}">Lietotāji</a></li>
